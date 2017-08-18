@@ -25,7 +25,7 @@ class GroupTableBuilder extends TableBuilder
             'level' => $this->integer(1)->notNull(),
             'status' => $this->integer(1)->notNull(),
             'category'  => $this->string(16)->notNull()->defaultValue('system'),
-            'path'  => $this->text()->notNull(),
+            'path'  => $this->text(),
         ];
     }
     
