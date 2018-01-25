@@ -62,6 +62,8 @@ class LoginForm extends \yii\base\Model
     public function attributeLabels()
     {
         return [
+                    'username' => UsniAdaptor::t('users', 'Username'),
+                    'password' => UsniAdaptor::t('users', 'Password'),
                     'rememberMe' => UsniAdaptor::t('users', 'Remember me'),
                ];
     }
