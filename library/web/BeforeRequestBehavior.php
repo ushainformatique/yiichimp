@@ -100,11 +100,11 @@ class BeforeRequestBehavior extends Behavior
             {
                 if(UsniAdaptor::app()->urlManager->enablePrettyUrl === true)
                 {
-                    $url = $baseUrl . '/install/default';
+                    $url = $baseUrl . '/index.php/install/default';
                 }
                 else
                 {
-                    $url = $baseUrl . '?' . UsniAdaptor::app()->getUrlManager()->routeParam . '=install/default';
+                    $url = $baseUrl . '/index.php?' . UsniAdaptor::app()->getUrlManager()->routeParam . '=install/default';
                 }
                 UsniAdaptor::app()->getResponse()->redirect($url)->send();
                 UsniAdaptor::app()->end(0);
