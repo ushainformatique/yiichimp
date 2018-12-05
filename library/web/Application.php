@@ -90,6 +90,6 @@ class Application extends \yii\web\Application
      */
     public function setNonStrictSqlMode()
     {
-        UsniAdaptor::db()->createCommand()->execute("SET SESSION sql_mode = ''");
+        UsniAdaptor::db()->createCommand("SET SESSION sql_mode = ''")->execute();
     }
 }
