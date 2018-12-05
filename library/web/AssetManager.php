@@ -66,12 +66,12 @@ class AssetManager extends \yii\web\AssetManager
     public function init()
     {
         $basePath = UsniAdaptor::getAlias($this->basePath);
-        FileUtil::createDirectory($basePath);
-        FileUtil::createDirectory($this->resourcesPath);
-        FileUtil::createDirectory($this->fileUploadPath);
-        FileUtil::createDirectory($this->imageUploadPath);
-        FileUtil::createDirectory($this->thumbUploadPath);
-        FileUtil::createDirectory($this->videoUploadPath);
+        FileUtil::createDirectory($basePath, 0777);
+        FileUtil::createDirectory($this->resourcesPath, 0777);
+        FileUtil::createDirectory($this->fileUploadPath, 0777);
+        FileUtil::createDirectory($this->imageUploadPath, 0777);
+        FileUtil::createDirectory($this->thumbUploadPath, 0777);
+        FileUtil::createDirectory($this->videoUploadPath, 0777);
         parent::init();
     }
 

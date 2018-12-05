@@ -28,6 +28,7 @@ class Application extends \yii\web\Application
         $this->checkRebuildModuleMetadataRequest();
         $this->checkClearCacheRequest();
         $this->moduleManager->bootstrap();
+        $this->setNonStrictSqlMode();
     }
     
     /**
@@ -82,5 +83,13 @@ class Application extends \yii\web\Application
     public function getFrontUrl()
     {
         return RequestUtil::getDomainUrl();
+    }
+
+    /**
+     * Set non strict sql mode
+     */
+    public function setNonStrictSqlMode()
+    {
+        UsniAdaptor::db()->createCommand()->execute("SET SESSION sql_mode = ''");
     }
 }
