@@ -10,7 +10,7 @@ namespace usni\library\dto;
  *
  * @package usni\library\dto
  */
-class BaseDTO extends \yii\base\Object
+class BaseDTO extends \yii\base\BaseObject
 {
     /**
      * Implement __toString magic method
