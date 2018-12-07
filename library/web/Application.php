@@ -28,7 +28,10 @@ class Application extends \yii\web\Application
         $this->checkRebuildModuleMetadataRequest();
         $this->checkClearCacheRequest();
         $this->moduleManager->bootstrap();
-        $this->setNonStrictSqlMode();
+        if(UsniAdaptor::app()->isInstalled())
+        {
+            $this->setNonStrictSqlMode();
+        }
     }
     
     /**
