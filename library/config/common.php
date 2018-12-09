@@ -7,6 +7,7 @@ return array(
     'bootstrap'          => ['log'],
     // application components
     'components'        => [
+                                'response' => ['class' => 'usni\library\web\Response'],
                                 'user' => [
                                     'class' => 'usni\library\web\User',
                                     // enable cookie-based authentication
