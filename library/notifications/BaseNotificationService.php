@@ -135,11 +135,11 @@ class BaseNotificationService extends \yii\base\Behavior
             $name     = ArrayUtil::getValue($settings, 'fromName', null);
         }
         $super  = UserDAO::getById(User::SUPER_USER_ID);
-        if($email == null)
+        if($email == null && $super !== false)
         {
             $email = $super['email'];
         }
-        if($name == null)
+        if($name == null && $super !== false)
         {
             $name = $super['firstname'] . ' ' . $super['lastname'];
         }
