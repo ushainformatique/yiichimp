@@ -14,13 +14,6 @@ return array(
         'memo' => 'PHP 5.5 or higher is required.',
     ),
     array(
-        'name' => 'PHP version',
-        'mandatory' => true,
-        'condition' => version_compare(PHP_VERSION, '7.3', '<'),
-        'by' => '<a href="http://www.yiiframework.com">Yii Framework</a>',
-        'memo' => 'PHP version less than 7.3 is required.',
-    ),
-    array(
         'name' => 'Reflection extension',
         'mandatory' => true,
         'condition' => class_exists('Reflection', false),
