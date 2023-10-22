@@ -75,8 +75,17 @@ return array(
                                 'authorizationManager' => ['class' => 'usni\library\modules\auth\business\AuthManager'],
                                 'configManager'      => ['class' => 'usni\library\business\ConfigManager'],
                                 'mailer' => [
-                                                'class' => 'yii\swiftmailer\Mailer',
+                                                'class' => 'yii\symfonymailer\Mailer',
                                                 'htmlLayout' => '@usni/library/mail/layouts/html',
+                                                'transport' => [
+                                                                    'scheme' => 'smtps',
+                                                                    'host' => '',
+                                                                    'username' => '',
+                                                                    'password' => '',
+                                                                    'port' => 465,
+                                                                    'dsn' => 'native://default',
+                                                                ],
+                                                'useFileTransport' => true,
                                             ]
                         ],
     'params'            => [],
