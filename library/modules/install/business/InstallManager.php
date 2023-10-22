@@ -243,7 +243,7 @@ class InstallManager extends Component
     protected function processDataInstall($module, $loadDemoData, $formDTO)
     {
         $key = $module->id;
-        if($module->dataManager == null)
+        if(is_null($module->dataManager))
         {
             $dmPaths          = $module->dataManagerPath;
             foreach($dmPaths as $dmPath)

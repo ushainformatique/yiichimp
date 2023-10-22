@@ -46,8 +46,8 @@ class ActiveForm extends \yii\bootstrap\ActiveForm
      */
     public function init()
     {
-        ob_start();
-        ob_implicit_flush(false);
+        //ob_start();
+        //ob_implicit_flush(false);
         parent::init();
     }
     
@@ -57,9 +57,9 @@ class ActiveForm extends \yii\bootstrap\ActiveForm
      */
     public function run()
     {
-        parent::run();
+        $formContent = parent::run();
         //Get the form content
-        $formContent = ob_get_clean();
+        //$formContent = ob_get_clean();
         
         //Get form content decorated
         if($this->decoratorView !== false)
